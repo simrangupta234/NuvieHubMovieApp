@@ -1,0 +1,90 @@
+.stylediv2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+  background-position: center center;
+  position: absolute;
+}
+
+.stylediv2 div p {
+  margin-bottom: -2px;
+  color: #a3a3a3;
+}
+.stylediv2 div h1 {
+  font-size: 60px;
+  font-weight: 900;
+  font-family: "Russo One", sans-serif;
+  margin-bottom: 40px;
+}
+
+.play,
+.trailer {
+  padding: 8px;
+  width: 130px;
+  border-radius: 40px;
+  margin: 5px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+}
+.play {
+  background-color: red;
+  color: white;
+}
+
+.slider-card {
+ padding: 10px;
+ outline: none;
+ transition: transform .3s;
+
+}
+
+.slider-card:hover{
+  transform: scale(1.02);
+}
+
+
+
+.calousel h2 {
+  padding-left: 10px;
+  font-weight: 700;
+}
+
+/* .Adminbtn{
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  width: fit-content;
+  outline: none;
+  border: none;
+  background-color: black;
+  color: red;
+  font-size: 24px;
+  font-weight: 500;
+} */
+
+.profile{
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  width: fit-content;
+  outline: none;
+  border: none;
+  background-color: black;
+  color: red;
+  font-size: 24px;
+  font-weight: 500;
+}
+.profile img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.homenav{
+  height: 60px;
+  width: 100%;
+}
+

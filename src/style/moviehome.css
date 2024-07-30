@@ -1,0 +1,157 @@
+.header-movie {
+  height: 55px;
+  padding: 0px 30px;
+  white-space: nowrap;
+}
+
+.symbolm {
+  display: none;
+}
+
+.btnm{
+  border: none;
+  outline: none;
+}
+.btnm:hover{
+  background-color: red;
+}
+.header-movie-right button {
+  font-size: 13px;
+  background-color: red;
+  margin: 0px 6px;
+  color: white;
+  padding: 6px 23px;
+  border-radius: 2px;
+}
+.style {
+  /* background: url("../src/assets/movie.jpg"); */
+  height: 530px;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  position: relative;
+}
+
+.stylediv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 49px;
+  background-image: linear-gradient(
+      to right,
+      rgb(24, 24, 24),
+      rgba(24, 24, 24, 0.2),
+      rgba(24, 24, 24, 0.1),
+      rgba(0, 0, 0, 0)
+    ),
+    linear-gradient(
+      to top,
+      rgb(24, 24, 24),
+      rgba(24, 24, 24, 0.2),
+      rgba(24, 24, 24, 0.1),
+      rgba(0, 0, 0, 0)
+    );
+  background-position: center center;
+  position: absolute;
+}
+
+.stylediv div p {
+  margin-bottom: -2px;
+  color: #a3a3a3;
+}
+.stylediv div h1 {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "Russo One", sans-serif;
+  margin-bottom: 40px;
+}
+
+.joinnowbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  padding: 0px 30px;
+  height: 60px;
+  box-shadow: rgb(22, 22, 22) 0px 0px 8px 1px;
+  background-image: linear-gradient(to right, rgb(46, 46, 46), rgb(24, 24, 24));
+  margin-top: -150px;
+}
+.joinnowm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.joinnowbox img {
+  width: auto;
+  height: 100%;
+}
+.joinnowm button {
+  font-size: 13px;
+  background-color: red;
+  color: white;
+  padding: 6px 23px;
+  border-radius: 2px;
+  width: 130px;
+}
+
+@media screen and (max-width: 950px) {
+  .textm {
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width: 650px) {
+  .stylediv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header-movie {
+    padding: 0px 5px;
+  }
+  .symbolm {
+    display: block;
+  }
+  .logom {
+    display: none;
+  }
+
+  .header-movie-right button {
+    font-size: 10px;
+    margin: 0px 3px;
+    padding: 6px 10px;
+  }
+  .style {
+    background: url("../src/assets/movie.jpg");
+    height: 530px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .stylediv {
+    padding: 0 8px;
+  }
+
+  .stylediv div p {
+    margin-bottom: 0;
+  }
+  .stylediv div h1 {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  .joinnowm {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .joinnowm button {
+    padding: 0;
+  }
+}
