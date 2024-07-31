@@ -1,0 +1,15 @@
+.signuppage2{
+    max-width: 420px;
+}
+.payment-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.payment-card img{
+    max-width: 39px;
+    max-height: 25px;
+}
