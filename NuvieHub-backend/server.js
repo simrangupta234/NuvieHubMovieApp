@@ -1,7 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 const connectDb = require("./config/dbConnection");
 const cors = require("cors");
 const multer = require("multer");
@@ -29,7 +29,6 @@ app.use(
   })
 );
 
-
 app.post("/api/movies", upload.array("testImage", 6), async (req, res) => {
   const { id, title, release_year, duration, genre, overview, starring } =
     req.body;
@@ -49,19 +48,17 @@ app.post("/api/movies", upload.array("testImage", 6), async (req, res) => {
     preview: [filePath[2], filePath[3], filePath[4], filePath[5]],
   });
 
-    const normalizedPath1 = path.join("/", path.normalize(filePath[0]));
-    saveImg.poster = normalizedPath1.replace(/\\/g, "/");
-    const normalizedPath2 = path.join("/", path.normalize(filePath[1]));
-    saveImg.thumbnail = normalizedPath2.replace(/\\/g, "/");
+  const normalizedPath1 = path.join("/", path.normalize(filePath[0]));
+  saveImg.poster = normalizedPath1.replace(/\\/g, "/");
+  const normalizedPath2 = path.join("/", path.normalize(filePath[1]));
+  saveImg.thumbnail = normalizedPath2.replace(/\\/g, "/");
 
-    for (var i = 2; i < 6; i++) {
-      const normalizedPath = path.join("/", path.normalize(filePath[i - 2]));
-      saveImg.preview[i - 2] = normalizedPath.replace(/\\/g, "/");
-    }
-    
+  for (var i = 2; i < 6; i++) {
+    const normalizedPath = path.join("/", path.normalize(filePath[i - 2]));
+    saveImg.preview[i - 2] = normalizedPath.replace(/\\/g, "/");
+  }
 
   try {
-  
     const result = await saveImg.save();
     console.log("Images are saved");
     res.status(201).json(result);
