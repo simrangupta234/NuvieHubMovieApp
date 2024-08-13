@@ -73,6 +73,9 @@ app.use("/profiles", express.static("profiles"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("Welcome to NuvieHub Movie App API");
+});
 app.use("/api/movies", require("./routes/movieRoutes"));
 app.use("/api/users", require("./routes/userRoutes"));
 
