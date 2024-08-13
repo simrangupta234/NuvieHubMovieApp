@@ -57,7 +57,7 @@ const EditDb = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/movies",
+        "https://nuviehub-movieapp.onrender.com/api/movies",
         formData,
         {
           headers: "multipart/form-data",
@@ -81,7 +81,6 @@ const EditDb = () => {
         title: "Changes Saved!",
         icon: "success",
         confirmButtonColor: "red",
-
       });
       console.log("response data", response.data);
     } catch (error) {

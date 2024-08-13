@@ -65,7 +65,7 @@ function Signuppage2() {
     if (Object.keys(errors).length === 0) {
       try {
         const response = await axios.post(
-          "http://localhost:3001/api/users/signup",
+          "https://nuviehub-movieapp.onrender.com/api/users/signup",
           JSON.stringify({ email: email, password: password }),
           {
             headers: { "Content-Type": "application/json" },

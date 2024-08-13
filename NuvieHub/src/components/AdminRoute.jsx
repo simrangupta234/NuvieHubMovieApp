@@ -18,9 +18,11 @@ const AdminRoute = () => {
   }, [accessToken, setLoggedInValue]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/api/users/${id}`).then((response) => {
-      setUser(response.data);
-    });
+    axios
+      .get(`https://nuviehub-movieapp.onrender.com/api/users${id}`)
+      .then((response) => {
+        setUser(response.data);
+      });
   }, [id]);
 
   return (

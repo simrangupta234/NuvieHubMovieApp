@@ -23,28 +23,31 @@ const Profile = () => {
   });
   useEffect(() => {
     setIsLoading(true);
-  
-    axios.get(`http://localhost:3001/api/users/${id}`).then((response) => {
-      setUser((prevUser) => ({
-        ...prevUser,
-        role: response.data.role,
-        email: response.data.email,
-        name: response.data.name,
-        dob: response.data.dob,
-        address: response.data.address,
-        no: response.data.no,
-        gender: response.data.gender,
-        profilePic: response.data.profilePic,
-      }));
-      setIsLoading(false);
-    });
-  
-    axios.get("http://localhost:3001/api/users").then((response) => {
-      setUserCount(response.data.length);
-      setIsLoading(false);
-    });
+
+    axios
+      .get(`https://nuviehub-movieapp.onrender.com/api/users/${id}`)
+      .then((response) => {
+        setUser((prevUser) => ({
+          ...prevUser,
+          role: response.data.role,
+          email: response.data.email,
+          name: response.data.name,
+          dob: response.data.dob,
+          address: response.data.address,
+          no: response.data.no,
+          gender: response.data.gender,
+          profilePic: response.data.profilePic,
+        }));
+        setIsLoading(false);
+      });
+
+    axios
+      .get("https://nuviehub-movieapp.onrender.com/api/users")
+      .then((response) => {
+        setUserCount(response.data.length);
+        setIsLoading(false);
+      });
   }, [id]);
-  
 
   const handleProfileImg = (e) => {
     if (e.target.files) {
@@ -75,7 +78,7 @@ const Profile = () => {
     formData.append("gender", user.gender);
     try {
       const response = await axios.patch(
-        `http://localhost:3001/api/users/${id}`,
+        `https://nuviehub-movieapp.onrender.com/api/users/${id}`,
         formData,
         {
           headers: {
@@ -100,7 +103,7 @@ const Profile = () => {
 
   return (
     <>
-       {isLoading ? (
+      {isLoading ? (
         <div className="d-flex justify-content-center align-items-center vh-100">
           <p style={{ color: "white" }}>
             <ColorRing
@@ -114,7 +117,7 @@ const Profile = () => {
             />
           </p>
         </div>
-      ) : ( 
+      ) : (
         <div className="profile-page d-flex flex-column">
           <div className="profile-nav">
             <Link to="/">
@@ -130,7 +133,7 @@ const Profile = () => {
             <div className="card-div text-light justify-content-center align-items-center w-100">
               <div className="profileCard m-lg-3 m-md-1  m-sm-1  p-lg-2 p-md-2 p-sm-0">
                 <img
-                  src={`http://localhost:3001${user.profilePic}`}
+                  src={`https://nuviehub-movieapp.onrender.com${user.profilePic}`}
                   alt=""
                   id="profile-pic"
                 />

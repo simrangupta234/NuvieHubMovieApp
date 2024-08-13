@@ -40,13 +40,17 @@ const Home = () => {
   const id = localStorage.getItem("UserId");
   useEffect(() => {
     // tokenValidation();
-    axios.get("http://localhost:3001/api/movies").then((response) => {
-      setMovies(response.data);
-    });
+    axios
+      .get("https://nuviehub-movieapp.onrender.com/api/movies")
+      .then((response) => {
+        setMovies(response.data);
+      });
 
-    axios.get(`http://localhost:3001/api/users/${id}`).then((response) => {
-      setUser(response.data);
-    });
+    axios
+      .get(`https://nuviehub-movieapp.onrender.com/api/users/${id}`)
+      .then((response) => {
+        setUser(response.data);
+      });
   }, [id]);
 
   var settings = {
@@ -75,7 +79,7 @@ const Home = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 0, 
+          initialSlide: 0,
         },
       },
       {
@@ -88,8 +92,7 @@ const Home = () => {
       },
     ],
   };
-  
-  
+
   return (
     <div className="movie-main w-100 text-light d-flex flex-column justify-content-center align-items-center">
       <div
@@ -104,7 +107,10 @@ const Home = () => {
         <div className="homenav">
           <div className="profile">
             <Link to={`/profile/${user._id}`}>
-              <img src={`http://localhost:3001${user.profilePic}`} alt="" />
+              <img
+                src={`https://nuviehub-movieapp.onrender.com${user.profilePic}`}
+                alt=""
+              />
             </Link>
           </div>
         </div>
@@ -138,7 +144,7 @@ const Home = () => {
               to={`/moviehome/${movie._id}`}
             >
               <img
-                src={`http://localhost:3001${movie?.poster}`}
+                src={`https://nuviehub-movieapp.onrender.com${movie?.poster}`}
                 alt={movie.title}
               />
             </Link>
@@ -155,7 +161,10 @@ const Home = () => {
               key={index}
               href={`/moviehome/${movie._id}`}
             >
-              <img src={`http://localhost:3001${movie?.poster}`} alt="" />
+              <img
+                src={`https://nuviehub-movieapp.onrender.com${movie?.poster}`}
+                alt=""
+              />
             </a>
           ))}
         </Slider>
@@ -170,7 +179,10 @@ const Home = () => {
               key={index}
               to={`/moviehome/${movie._id}`}
             >
-              <img src={`http://localhost:3001${movie?.poster}`} alt="" />
+              <img
+                src={`https://nuviehub-movieapp.onrender.com${movie?.poster}`}
+                alt=""
+              />
             </Link>
           ))}
         </Slider>

@@ -23,8 +23,6 @@ export default function Login() {
   const [loading] = useState(false);
   const { isLoggedIn, setLoggedInValue } = useAuth();
 
-  
-
   const accessToken = localStorage.getItem("accessToken");
   useEffect(() => {
     if (accessToken) {
@@ -68,7 +66,7 @@ export default function Login() {
     if (Object.keys(errors).length === 0) {
       try {
         const response = await axios.post(
-          "http://localhost:3001/api/users/login2",
+          "https://nuviehub-movieapp.onrender.com/api/users/login2",
           JSON.stringify({ email: email }),
           {
             headers: { "Content-Type": "application/json" },
@@ -198,13 +196,19 @@ export default function Login() {
               <button type="submit" className="getStartedbtn">
                 {loading ? (
                   <ColorRing
-                  visible={true}
-                  height="80"
-                  width="80"
-                  ariaLabel="color-ring-loading"
-                  wrapperStyle={{}}
-                  wrapperClass="color-ring-wrapper"
-                  colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
+                    visible={true}
+                    height="80"
+                    width="80"
+                    ariaLabel="color-ring-loading"
+                    wrapperStyle={{}}
+                    wrapperClass="color-ring-wrapper"
+                    colors={[
+                      "#e15b64",
+                      "#f47e60",
+                      "#f8b26a",
+                      "#abbd81",
+                      "#849b87",
+                    ]}
                   />
                 ) : (
                   <>
@@ -399,8 +403,8 @@ export default function Login() {
           </button>
           <div className="ans">
             <p>
-              The NuvieHub Kids experience is included in your membership to give
-              parents control while kids enjoy family-friendly TV shows and
+              The NuvieHub Kids experience is included in your membership to
+              give parents control while kids enjoy family-friendly TV shows and
               films in their own space.
             </p>
             <p>

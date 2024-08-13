@@ -28,7 +28,7 @@ const MovieHome = () => {
   // const tokenValidation = async () => {
   //   try {
   //     const response = await axios.post(
-  //       "http://localhost:3001/api/users/login",
+  //       "https://nuviehub-movieapp.onrender.com/api/users/login",
   //       JSON.stringify({ email: email, password: password }),
   //       {
   //         headers: { "Content-Type": "application/json" },
@@ -47,7 +47,7 @@ const MovieHome = () => {
 
   const idformovie = async () => {
     await axios
-      .get(`http://localhost:3001/api/movies/${id}`)
+      .get(`https://nuviehub-movieapp.onrender.com/api/movies/${id}`)
       .then((response) => {
         if (response.status === 200) {
           setMovies(response.data);
@@ -59,10 +59,10 @@ const MovieHome = () => {
 
   useEffect(() => {
     idformovie();
-  },[]);
+  }, []);
 
   const myStyle = {
-    backgroundImage: `url(http://localhost:3001${movies.thumbnail})`,
+    backgroundImage: `url(https://nuviehub-movieapp.onrender.com${movies.thumbnail})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     height: "530px",
@@ -214,7 +214,7 @@ const MovieHome = () => {
               <img
                 className="img-fluid object-fit-cover"
                 alt={`Preview ${index + 1}`}
-                src={`http://localhost:3001${previews}`}
+                src={`https://nuviehub-movieapp.onrender.com${previews}`}
               />
             </div>
           ))}

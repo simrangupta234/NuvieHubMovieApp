@@ -61,7 +61,7 @@ export default function Loginpage2() {
     if (Object.keys(errors).length === 0) {
       try {
         const response = await axios.post(
-          "http://localhost:3001/api/users/login",
+          "https://nuviehub-movieapp.onrender.com/api/users/login",
           JSON.stringify({ email: email, password: values.password }),
           {
             headers: { "Content-Type": "application/json" },
