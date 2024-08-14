@@ -22,7 +22,7 @@ const upload = multer({ storage: storage });
 connectDb();
 app.use(
   cors({
-    origin: ["https://nuviehub2.onrender.com"],
+    origin: ["https://nuviehub2.onrender.com", "http://localhost:5173"],
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     optionsSuccessStatus: 204,
