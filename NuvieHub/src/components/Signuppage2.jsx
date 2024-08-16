@@ -54,7 +54,7 @@ function Signuppage2() {
     },
     validate,
     onSubmit: (values) => {
-      console.log("Form submitted with values:", values);
+      // console.log("Form submitted with values:", values);
       validateSubmit(values);
     },
   });

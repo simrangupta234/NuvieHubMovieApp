@@ -53,7 +53,7 @@ const EditDb = () => {
     movies.preview.forEach((file) => {
       formData.append("testImage", file);
     });
-    console.log("formData", ...formData);
+    // console.log("formData", ...formData);
 
     try {
       const response = await axios.post(
@@ -64,7 +64,7 @@ const EditDb = () => {
         }
       );
 
-      console.log("formData", ...formData);
+      // console.log("formData", ...formData);
       setMovies({
         id: 0,
         title: "",
@@ -82,7 +82,7 @@ const EditDb = () => {
         icon: "success",
         confirmButtonColor: "red",
       });
-      console.log("response data", response.data);
+      // console.log("response data", response.data);
     } catch (error) {
       console.error("Error adding movie:", error);
     }

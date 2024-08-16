@@ -55,7 +55,7 @@ export default function Login() {
     },
     validate,
     onSubmit: (values) => {
-      console.log("Form submitted with values:", values);
+      // console.log("Form submitted with values:", values);
       validateSubmit(values);
     },
   });
@@ -74,7 +74,7 @@ export default function Login() {
           }
         );
 
-        console.log("User signedup:", response.data);
+        // console.log("User signedup:", response.data);
         if (response.data.email) {
           navigate("/login");
         } else {

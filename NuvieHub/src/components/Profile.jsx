@@ -86,7 +86,7 @@ const Profile = () => {
           },
         }
       );
-      console.log("formData", ...formData);
+      // console.log("formData", ...formData);
 
       Swal.fire({
         title: "Changes Saved!",
@@ -95,7 +95,7 @@ const Profile = () => {
         confirmButtonColor: "red",
         iconColor: "red",
       });
-      console.log("response", response.data);
+      // console.log("response", response.data);
     } catch (error) {
       console.log(error);
     }

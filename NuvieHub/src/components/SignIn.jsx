@@ -44,7 +44,7 @@ function SignIn() {
     },
     validate,
     onSubmit: (values) => {
-      console.log("Form submitted with values:", values);
+      // console.log("Form submitted with values:", values);
       validateSubmit(values);
     },
   });
@@ -62,7 +62,7 @@ function SignIn() {
           }
         );
 
-        console.log("response", response.data.message);
+        // console.log("response", response.data.message);
         if (response.data.message === "Email not found") {
           setWarning(
             "Sorry, we can't find an account with this email address. Please try again or create a new account."
@@ -77,7 +77,7 @@ function SignIn() {
           navigate("/user/home");
           localStorage.setItem("UserId", response.data.user._id);
 
-          console.log("User loggedin:", response.data);
+          // console.log("User loggedin:", response.data);
         }
       } catch (error) {
         console.error("invalid user data", error);
