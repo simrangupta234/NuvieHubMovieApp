@@ -2,9 +2,15 @@
   color: #333;
 }
 .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #e6e6e6;
+  padding: 0 3%;
 }
 .logo {
+  flex: 1;
   padding-left: 3%;
 }
 
@@ -35,9 +41,6 @@
   outline: none;
 }
 
-
-
-
 .wrapper-input2 .input-data label {
   position: absolute;
   bottom: 10px;
@@ -49,10 +52,9 @@
   text-align: left;
   padding-left: 16px;
 }
-.footer-section2{
+.footer-section2 {
   background-color: #f3f3f3;
 }
-
 
 .footer-section2 p {
   color: #737373;
@@ -75,9 +77,8 @@
   text-decoration: underline;
 }
 
-
 @media screen and (max-width: 900px) {
- .footer2 .footer-item {
+  .footer2 .footer-item {
     flex: 50%;
   }
 }

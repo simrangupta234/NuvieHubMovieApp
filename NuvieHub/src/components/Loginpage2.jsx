@@ -93,7 +93,7 @@ export default function Loginpage2() {
   return (
     <div className="main w-100 bg-light  ">
       <div
-        className="header d-flex justify-content-center align-items-center  "
+        className="header w-100 d-flex justify-content-center align-items-center  "
         style={{ height: "100wh" }}
       >
         <div
@@ -128,7 +128,7 @@ export default function Loginpage2() {
         <br />
       </div>
 
-      <div className="d-flex flex-column justify-content-center align-items-center mt-5">
+      <div className=" w-100 d-flex flex-column justify-content-center align-items-center mt-5">
         <div style={{ textAlign: "start", maxWidth: "440px", padding: "20px" }}>
           <form onSubmit={formik.handleSubmit}>
             <p>STEP 1 OF 3</p>

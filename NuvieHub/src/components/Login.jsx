@@ -111,7 +111,7 @@ export default function Login() {
   });
 
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center">
+    <div className="d-flex flex-column justify-content-center align-items-center w-100">
       <div className="background-main">
         <div className="Navbar">
           <div className="logo">
@@ -184,6 +184,7 @@ export default function Login() {
                     color: "rgb(235, 57, 66)",
                     fontSize: "12px",
                     paddingLeft: "16px",
+                    width: "100%",
                   }}
                 >
                   {formik.errors.email}
@@ -192,7 +193,7 @@ export default function Login() {
 
               <label htmlFor="email1">Email address</label>
             </div>
-            <div className="col-4" style={{ marginLeft: "10px" }}>
+            <div className="col-4" style={{ marginLeft: "20px" }}>
               <button type="submit" className="getStartedbtn">
                 {loading ? (
                   <ColorRing
@@ -273,7 +274,7 @@ export default function Login() {
             and TV.
           </p>
         </div>
-        <div className="secVideo ">
+        <div className="secVideo">
           <img src={tv2} alt="" />
           <video autoPlay loop muted>
             <source src={video} type="video/mp4" />
@@ -417,7 +418,7 @@ export default function Login() {
       </div>
 
       <div
-        className=" input-wrapper2 text-light bg-black d-flex flex-column justify-content-center align-items-center text-center pt-5 pb-5"
+        className=" input-wrapper2 text-light bg-black d-flex flex-column justify-content-center align-items-center text-center pt-5 pb-5 w-100"
         style={{ marginBottom: "10px" }}
       >
         <p>
@@ -450,6 +451,7 @@ export default function Login() {
                   color: "rgb(235, 57, 66)",
                   fontSize: "12px",
                   paddingLeft: "16px",
+                  width: "100%",
                 }}
               >
                 {formik.errors.email}
@@ -469,7 +471,10 @@ export default function Login() {
 
       <div className="seperation"></div>
 
-      <div className="footer-section p-5 bg-black" style={{ color: "white" }}>
+      <div
+        className="footer-section p-5 bg-black w-100"
+        style={{ color: "white" }}
+      >
         <p>Questions? Call 000-800-919-1694</p>
 
         <div className="footer">

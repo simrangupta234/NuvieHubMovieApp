@@ -1,7 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  width: 100%;
   box-sizing: border-box;
 }
 body {
@@ -19,8 +18,11 @@ body {
   background-color: black;
 }
 
-
-#animation1, #animation2,#animation3, #animation4, #animation5{
+#animation1,
+#animation2,
+#animation3,
+#animation4,
+#animation5 {
   text-align: center;
   position: relative;
   animation-name: slider;
@@ -30,10 +32,10 @@ body {
 }
 
 @keyframes slider {
-  from{
+  from {
     right: -300px;
-  }to{
-    right:0px;
   }
-  
+  to {
+    right: 0px;
+  }
 }
