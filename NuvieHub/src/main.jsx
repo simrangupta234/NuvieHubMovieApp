@@ -4,9 +4,7 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-
-  <div className="d-flex flex-column">
-    <App /> 
+  <div className=" w-100 d-flex flex-column">
+    <App />
   </div>
-
 );

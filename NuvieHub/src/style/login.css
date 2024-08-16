@@ -127,18 +127,16 @@ input::placeholder {
   color: white;
   width: 100%;
   border-radius: 4px;
-
-
 }
 
-.input-data input:invalid  {
+.input-data input:invalid {
   border: 1px solid #b92d2b;
 }
 .input-data input:focus ~ label {
   transform: translateY(-20px);
   font-size: 13px;
 }
-.input-data  input:not(:placeholder-shown) ~ label {
+.input-data input:not(:placeholder-shown) ~ label {
   transform: translateY(-20px);
   font-size: 13px;
 }
@@ -155,8 +153,8 @@ input::placeholder {
 }
 
 .getStartedbtn {
-  display: flex ;
-  justify-content: center ;
+  display: flex;
+  justify-content: center;
   align-items: center;
   background-color: red;
   font-size: 24px;
@@ -174,8 +172,7 @@ input::placeholder {
   width: auto;
 }
 
-
-.loader{
+.loader {
   width: 30px;
   height: 30px;
   pointer-events: none;
@@ -186,13 +183,12 @@ input::placeholder {
 }
 
 @keyframes loader {
-  0%{
+  0% {
     transform: rotate(0turn);
   }
-  100%{
+  100% {
     transform: rotate(1turn);
   }
-  
 }
 
 .section1,
@@ -204,7 +200,7 @@ input::placeholder {
   align-items: center;
   color: white;
   background-color: black;
-  width: 95vw;
+  width: 100vw;
   margin: auto;
 }
 
@@ -400,7 +396,7 @@ input::placeholder {
   .section2,
   .section3,
   .section4 {
-    width: 80vw;
+    width: 100vw;
   }
 
   .wrapper-input {
@@ -548,7 +544,7 @@ input::placeholder {
   }
 }
 
-@media screen and (max-width: 310px) {
+@media screen and (max-width: 360px) {
   .Navbar {
     flex-direction: column;
     justify-content: center;
