@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div
-      className="footer-section p-5"
+      className="footer-section p-5 w-100"
       style={{ color: "#737373", backgroundColor: "#181818" }}
     >
       <p style={{ color: "#737373" }}>Questions? Call 000-800-919-1694</p>

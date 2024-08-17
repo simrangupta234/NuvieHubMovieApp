@@ -94,7 +94,7 @@ const Home = () => {
   };
 
   return (
-    <div className="movie-main w-100 text-light d-flex flex-column justify-content-center align-items-center">
+    <div className="movie-main text-light d-flex flex-column justify-content-center align-items-center">
       <div
         className="style"
         style={{
@@ -102,6 +102,7 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           position: "relative",
+          width: "100%",
         }}
       >
         <div className="homenav">
@@ -134,7 +135,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" calousel d-flex  flex-column justify-content-center align-items-center  pt-4 pb-4">
+      <div className=" calousel d-flex  flex-column justify-content-center align-items-center  pt-4 pb-4 ">
         <h2>Featured</h2>
         <Slider {...settings} style={{ position: "relative" }}>
           {movies.map((movie, index) => (
@@ -146,13 +147,15 @@ const Home = () => {
               <img
                 src={`https://nuviehub-movieapp.onrender.com${movie?.poster}`}
                 alt={movie.title}
+                width={300}
+                height={300}
               />
             </Link>
           ))}
         </Slider>
       </div>
 
-      <div className=" calousel d-flex  flex-column justify-content-center align-items-center pt-4 pb-4">
+      <div className=" calousel d-flex  flex-column justify-content-center align-items-center pt-4 pb-4 ">
         <h2>Trending Now</h2>
         <Slider {...settings} style={{ position: "relative" }}>
           {movies.map((movie, index) => (
@@ -170,7 +173,7 @@ const Home = () => {
         </Slider>
       </div>
 
-      <div className=" calousel d-flex  flex-column justify-content-center align-items-center  pt-4 pb-4">
+      <div className=" calousel d-flex  flex-column justify-content-center align-items-center  pt-4 pb-4 ">
         <h2>New Releases</h2>
         <Slider {...settings} style={{ position: "relative" }}>
           {movies.map((movie, index) => (

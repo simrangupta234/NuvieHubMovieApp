@@ -1,3 +1,7 @@
+.movie-main {
+  width: 100vw;
+}
+
 .stylediv2 {
   display: flex;
   justify-content: center;
@@ -35,17 +39,26 @@
 }
 
 .slider-card {
- padding: 10px;
- outline: none;
- transition: transform .3s;
-
+  padding: 10px;
+  outline: none;
+  transition: transform 0.3s;
 }
 
-.slider-card:hover{
+.slider-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.slider-card:hover {
   transform: scale(1.02);
 }
 
-
+.calousel {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
 
 .calousel h2 {
   padding-left: 10px;
@@ -65,7 +78,7 @@
   font-weight: 500;
 } */
 
-.profile{
+.profile {
   position: absolute;
   top: 20px;
   right: 26px;
@@ -77,14 +90,13 @@
   font-size: 24px;
   font-weight: 500;
 }
-.profile img{
+.profile img {
   height: 40px;
   width: 40px;
   border-radius: 50%;
 }
 
-.homenav{
+.homenav {
   height: 60px;
   width: 100%;
 }
-

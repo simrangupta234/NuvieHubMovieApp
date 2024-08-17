@@ -71,7 +71,7 @@ const MovieHome = () => {
 
   return (
     <div className="movie-main w-100 text-light d-flex flex-column justify-content-center align-items-center">
-      <div className="header-movie d-flex flex-row justify-content-between align-items-center bg-black text-light  ">
+      <div className="header-movie d-flex flex-row justify-content-between align-items-center bg-black text-light w-100  ">
         <a
           className="logom"
           href="/"
@@ -150,7 +150,7 @@ const MovieHome = () => {
         </div>
       </div>
 
-      <div className="style" style={myStyle}>
+      <div className="style w-100" style={myStyle}>
         <div className="stylediv">
           <div style={{ marginTop: "-40px" }}>
             <p>
