@@ -118,8 +118,8 @@ const Profile = () => {
           </p>
         </div>
       ) : (
-        <div className="profile-page d-flex flex-column">
-          <div className="profile-nav">
+        <div className="profile-page d-flex flex-column w-100">
+          <div className="profile-nav w-100">
             <Link to="/">
               <img src={logo} alt="logo" />
             </Link>
@@ -149,13 +149,13 @@ const Profile = () => {
                 />
 
                 <hr />
-                <div className="d-flex flex-column  justify-content-center align-items-center ">
+                <div className="d-flex flex-column  justify-content-center align-items-center w-100 ">
                   <p className=" w-auto pe-2 fw-light lh-base">Email:</p>
                   <p className="w-auto text-break">{user.email}</p>
                 </div>
               </div>
 
-              <div className="infoCard d-flex flex-column m-lg-3 m-md-1  m-sm-1  p-lg-2 p-md-2 p-sm-0">
+              <div className="infoCard d-flex flex-column m-lg-3 m-md-1  m-sm-1  p-lg-2 p-md-2 p-sm-0 ">
                 <h2>General Information</h2>
 
                 <div>

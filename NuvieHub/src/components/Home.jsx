@@ -96,7 +96,7 @@ const Home = () => {
   return (
     <div className="movie-main text-light d-flex flex-column justify-content-center align-items-center">
       <div
-        className="style"
+        className="style p-4"
         style={{
           background: `url(${movieHeist})`,
           backgroundRepeat: "no-repeat",
@@ -135,9 +135,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" calousel d-flex  flex-column justify-content-center align-items-center  pt-4 pb-4 ">
-        <h2>Featured</h2>
-        <Slider {...settings} style={{ position: "relative" }}>
+      <div className=" calousel d-flex  flex-column justify-content-center align-items-center  p-4 w-100 ">
+        <h2 className=" align-self-start">Featured</h2>
+        <Slider {...settings} style={{ position: "relative", width: "100%" }}>
           {movies.map((movie, index) => (
             <Link
               className="slider-card"
@@ -155,9 +155,9 @@ const Home = () => {
         </Slider>
       </div>
 
-      <div className=" calousel d-flex  flex-column justify-content-center align-items-center pt-4 pb-4 ">
-        <h2>Trending Now</h2>
-        <Slider {...settings} style={{ position: "relative" }}>
+      <div className=" calousel d-flex  flex-column justify-content-center align-items-center p-4 w-100 ">
+        <h2 className=" align-self-start">Trending Now</h2>
+        <Slider {...settings} style={{ position: "relative", width: "100%" }}>
           {movies.map((movie, index) => (
             <a
               className="slider-card"
@@ -173,9 +173,9 @@ const Home = () => {
         </Slider>
       </div>
 
-      <div className=" calousel d-flex  flex-column justify-content-center align-items-center  pt-4 pb-4 ">
-        <h2>New Releases</h2>
-        <Slider {...settings} style={{ position: "relative" }}>
+      <div className=" calousel d-flex  flex-column justify-content-center align-items-center  p-4 w-100 ">
+        <h2 className=" align-self-start">New Releases</h2>
+        <Slider {...settings} style={{ position: "relative", width: "100%" }}>
           {movies.map((movie, index) => (
             <Link
               className="slider-card"
